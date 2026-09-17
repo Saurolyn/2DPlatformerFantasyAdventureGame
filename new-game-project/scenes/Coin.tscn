@@ -14,10 +14,10 @@ script = ExtResource("1_owubc")
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 
 [node name="ColorRect" type="ColorRect" parent="CoinSpinningAnimation" unique_id=1386470974]
-offset_left = -23.0
-offset_top = -18.0
-offset_right = 17.0
-offset_bottom = 22.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752163326]

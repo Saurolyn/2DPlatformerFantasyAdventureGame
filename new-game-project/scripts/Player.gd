@@ -12,15 +12,15 @@ func _physics_process(delta):
 	# Add gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		play_anim("jump") # Fixed: removed $ so it uses the variable
+		play_anim("jump")
 
-	# Handle Jump (Input 1)
+	# Handle Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		if jump_sound:
 			jump_sound.play()
 
-	# Handle Movement (Inputs 2 & 3)
+	# Handle Left and Right Movement
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED

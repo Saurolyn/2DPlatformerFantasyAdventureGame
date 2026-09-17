@@ -14,10 +14,10 @@ script = ExtResource("1_p0vlq")
 sprite_frames = SubResource("SpriteFrames_57qmd")
 
 [node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D" unique_id=724103443]
-offset_left = -21.0
-offset_top = -20.0
-offset_right = 19.0
-offset_bottom = 20.0
+offset_left = -10.0
+offset_top = -15.0
+offset_right = 10.0
+offset_bottom = 15.0
 
 [node name="Capsule" type="CollisionShape2D" parent="." unique_id=15818860]
 shape = SubResource("CapsuleShape2D_g4v7s")

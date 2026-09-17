@@ -23,20 +23,25 @@ format = 2
 
 [node name="Player" parent="." unique_id=511585182 instance=ExtResource("1_q4iis")]
 position = Vector2(590, 96)
+scale = Vector2(1.677163, 1.8022426)
 
 [node name="HUD" parent="." unique_id=1628653138 instance=ExtResource("2_m3clv")]
 
 [node name="Enemy" parent="." unique_id=1794879352 instance=ExtResource("5_86ljf")]
 position = Vector2(882, 548)
+scale = Vector2(1.677163, 1.8022426)
 
 [node name="Coin" parent="." unique_id=722444702 instance=ExtResource("4_4eo0i")]
 position = Vector2(593, 264)
+scale = Vector2(2.2144685, 2.2098231)
 
 [node name="Coin2" parent="." unique_id=1262266975 instance=ExtResource("4_4eo0i")]
 position = Vector2(795, 499)
+scale = Vector2(2.2144685, 2.2098231)
 
 [node name="Coin3" parent="." unique_id=484928845 instance=ExtResource("4_4eo0i")]
 position = Vector2(156, 491)
+scale = Vector2(2.2144685, 2.2098231)
 
 [node name="Platform" parent="." unique_id=1746502382 instance=ExtResource("5_qifjx")]
 

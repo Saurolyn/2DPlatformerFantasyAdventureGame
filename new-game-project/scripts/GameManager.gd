@@ -21,7 +21,7 @@ func play_click_sound():
 	if click_sfx_stream:
 		var sfx_player = AudioStreamPlayer2D.new()
 		sfx_player.stream = click_sfx_stream
-		sfx_player.process_mode = Node.PROCESS_MODE_ALWAYS # Works during game pause
+		sfx_player.process_mode = Node.PROCESS_MODE_ALWAYS # Plays even when paused
 		add_child(sfx_player)
 		sfx_player.play()
 		sfx_player.finished.connect(sfx_player.queue_free) # Auto-delete when done
@@ -47,12 +47,12 @@ func play_defeat_music():
 func lose_game():
 	play_defeat_music()
 	game_over.emit()
-	get_tree().paused = true # Pauses the game state
+	get_tree().paused = true # Game state: Paused
 
 func win_game():
 	play_victory_music()
 	game_won.emit()
-	get_tree().paused = true
+	get_tree().paused = true # Game state: Paused
 
 func reset_game():
 	coins = 0
@@ -60,6 +60,6 @@ func reset_game():
 		get_node("VictoryMusicPlayer").queue_free()
 	if has_node("DefeatMusicPlayer"):
 		get_node("DefeatMusicPlayer").queue_free()
-	get_tree().paused = false
+	get_tree().paused = false # Game state: Paused
 	get_tree().change_scene_to_file("res://scenes/Level.tscn")
 	

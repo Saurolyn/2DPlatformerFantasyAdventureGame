@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 func _ready():
-	# Elegant decoupling: HUD listens to GameManager state changes
 	GameManager.coin_collected.connect(update_coins)
 	GameManager.game_over.connect(show_lose_screen)
 	GameManager.game_won.connect(show_win_screen)
