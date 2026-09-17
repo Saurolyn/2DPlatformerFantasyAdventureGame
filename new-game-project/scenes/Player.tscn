@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cg2yq7unj11sb"]
+
+[ext_resource type="Script" uid="uid://djuqjjx7a6slk" path="res://scripts/Player.gd" id="1_p0vlq"]
+[ext_resource type="AudioStream" uid="uid://dlviraix7018t" path="res://assets/AUDIO/Swoosh_SFX.mp3" id="2_v6fml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+
+[node name="Player" type="CharacterBody2D" unique_id=511585182]
+script = ExtResource("1_p0vlq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2035841349]
+sprite_frames = SubResource("SpriteFrames_57qmd")
+
+[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D" unique_id=724103443]
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = 20.0
+
+[node name="Capsule" type="CollisionShape2D" parent="." unique_id=15818860]
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=1328461998]
+stream = ExtResource("2_v6fml")
