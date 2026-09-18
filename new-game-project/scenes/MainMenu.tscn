@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ne64x48a35" path="res://assets/GRAPHICS/BUTTONS/Quit Game_button_text.png" id="7_ptake"]
 [ext_resource type="Texture2D" uid="uid://duwb5jlqtkg7w" path="res://assets/GRAPHICS/BANNERS & SCROLLS/Scroll_03.png" id="8_hubol"]
 [ext_resource type="Texture2D" uid="uid://pk2xp4sok1l5" path="res://assets/GRAPHICS/PROGRAMMER NAME TEXT/Aidan_Perkins_text.png" id="9_8vx4p"]
+[ext_resource type="Texture2D" uid="uid://gg7uxx1pyvbi" path="res://assets/GRAPHICS/PROGRAMMER NAME TEXT/Course_Notation_Text.png" id="10_7la6k"]
 
 [node name="MainMenu" type="Control" unique_id=1158718084]
 layout_mode = 3
@@ -75,6 +76,11 @@ texture = ExtResource("8_hubol")
 position = Vector2(888, 350)
 scale = Vector2(0.57092917, 0.7850903)
 texture = ExtResource("9_8vx4p")
+
+[node name="CourseNotationText" type="Sprite2D" parent="." unique_id=899154014]
+position = Vector2(896, 442)
+scale = Vector2(0.3113695, 0.65584415)
+texture = ExtResource("10_7la6k")
 
 [connection signal="pressed" from="CenterLayout/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="CenterLayout/QuitGame" to="." method="_on_quit_game_pressed"]
