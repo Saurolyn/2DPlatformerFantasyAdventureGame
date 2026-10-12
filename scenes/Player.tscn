@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djuqjjx7a6slk" path="res://scripts/Player.gd" id="1_p0vlq"]
 [ext_resource type="Texture2D" uid="uid://quac3j8ps2wk" path="res://assets/art/Fantasy Adventurer_female_Ranger_SpriteSheet.png" id="2_3li8b"]
+[ext_resource type="Script" uid="uid://c08nishhfn8si" path="res://scripts/damage_area.gd" id="3_3li8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3li8b"]
 atlas = ExtResource("2_3li8b")
@@ -1274,7 +1275,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
 
-[node name="Player" type="CharacterBody2D" unique_id=511585182]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x4b7"]
+
+[node name="Player" type="CharacterBody2D" unique_id=511585182 groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_p0vlq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2035841349]
@@ -1293,3 +1297,14 @@ zoom = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1508774178]
 scale = Vector2(2.09416, 3.3215241)
 shape = SubResource("CapsuleShape2D_yf5fn")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=15193699]
+light_mask = 0
+scale = Vector2(0.15674941, 0.5072071)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_3li8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=754653285]
+scale = Vector2(28.113398, 14.2892885)
+shape = SubResource("RectangleShape2D_5x4b7")

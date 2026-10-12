@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://ekg22wpfrep2" path="res://scripts/HUD.gd" id="1_k5de2"]
 [ext_resource type="Script" uid="uid://ceficjcx34oqw" path="res://scripts/MainMenu.gd" id="2_fls4u"]
+[ext_resource type="Script" uid="uid://c5wqbup48l0dx" path="res://scripts/health_bar.gd" id="3_1etfg"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1628653138]
 process_mode = 3
 script = ExtResource("1_k5de2")
 
 [node name="CoinText" type="Label" parent="." unique_id=222648593]
-offset_left = 16.0
-offset_top = 15.0
-offset_right = 92.0
-offset_bottom = 38.0
+offset_left = 15.0
+offset_top = 67.00001
+offset_right = 91.0
+offset_bottom = 90.000015
 scale = Vector2(1.906067, 1.7172785)
 text = "Coins: 0/3"
 
@@ -52,12 +53,15 @@ text = "Controls:
 Slash Sword  - Space"
 horizontal_alignment = 2
 
-[node name="HealthText" type="Label" parent="." unique_id=1944595014]
-offset_left = 15.0
-offset_top = 53.999996
-offset_right = 91.0
-offset_bottom = 77.0
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1252816754]
+modulate = Color(1, 0, 0, 1)
+offset_left = 8.0
+offset_top = 10.000004
+offset_right = 93.0
+offset_bottom = 37.000008
 scale = Vector2(1.906067, 1.7172785)
-text = "Health: 3/3"
+max_value = 3.0
+show_percentage = false
+script = ExtResource("3_1etfg")
 
 [connection signal="pressed" from="GameOverPanel/RestartButton" to="." method="_on_restart_button_pressed"]

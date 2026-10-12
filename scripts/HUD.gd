@@ -1,7 +1,6 @@
 extends CanvasLayer
 
-@onready var health_label: Label = $HealthText
-
+@onready var health_bar = $HealthBar # Ensure this matches your ProgressBar node name
 func _ready():
 	GameManager.coin_collected.connect(update_coins)
 	GameManager.game_over.connect(show_lose_screen)
@@ -20,8 +19,9 @@ func show_win_screen():
 	$GameOverPanel.show()
 
 func update_health_display(current_health: int):
-	# Displays "Health: 3/3", "Health: 2/3", etc.
-	health_label.text = "Health: " + str(current_health) + "/3"
+	# ProgressBars use numerical values, not text strings
+	if health_bar:
+		health_bar.value = current_health
 
 # Connect the RestartButton's pressed signal here
 func _on_restart_button_pressed():
